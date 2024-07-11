@@ -25,16 +25,16 @@ df = pd.read_csv('orders.csv',na_values=['Not Available','unknown'])
 df
 
 #rename columns names ..make them lower case and replace space with underscore
-#df.rename(columns={'Order Id':'order_id', 'City':'city'}) In this we have to write all the columns name i.e why 
-#df.columns #gives all the columns
-#df.columns=df.columns.str.lower() #it will convert the columns into lower case
+df.rename(columns={'Order Id':'order_id', 'City':'city'}) # In this we have to write all the columns name i.e why 
+df.columns #gives all the columns
+df.columns=df.columns.str.lower() #it will convert the columns into lower case
 df.columns=df.columns.str.replace(' ','_') #it wil convert the space into _
 df.head(5)
 
 #derive new columns discount , sale price and profit
-#df['discount']=df['list_price']*df['discount_percent']*.01  #this 01 is 1/100
-#df['sale_price']= df['list_price']-df['discount'] 
-#df['profit']=df['sale_price']-df['cost_price']
+df['discount']=df['list_price']*df['discount_percent']*.01  #this 01 is 1/100
+df['sale_price']= df['list_price']-df['discount'] 
+df['profit']=df['sale_price']-df['cost_price']
 df
 
 
