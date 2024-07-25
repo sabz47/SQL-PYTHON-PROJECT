@@ -1,8 +1,4 @@
-#importing dataset from kaggle
-#!pip install kaggle
 
-import kaggle 
-!Kaggle datasets download ankitbansal06/retail-orders -f orders.csv
 
 #extract file from zip file
 import zipfile
